@@ -109,6 +109,8 @@ jobs:
         uses: its404/get-flutter-version@v1.0.0
       - name: Disabling flutter analytics
         run: flutter config --no-analytics
+      - name: Installing Ninja
+        run: sudo apt-get install ninja-build
       - name: Running build
         id: compile
         run: flutter build linux --obfuscate --split-debug-info=build/debugLinux
